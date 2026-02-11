@@ -1,3 +1,4 @@
 out/
 cache/
 foundry.lock
+.env

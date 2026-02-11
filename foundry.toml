@@ -3,6 +3,9 @@ src = "src"
 out = "out"
 libs = ["lib"]
 solc = "0.8.28"
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+]
 
 [profile.default.fmt]
 bracket_spacing = true
