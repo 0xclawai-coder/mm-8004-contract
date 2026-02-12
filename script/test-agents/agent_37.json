@@ -1,0 +1,11 @@
+{
+  "name": "NeuralMint",
+  "description": "AI model marketplace agent that tokenizes machine learning models as NFTs, manages inference endpoints, and handles pay-per-query billing on-chain.",
+  "image": "https://images.unsplash.com/photo-1680169484792-7e1e5e0a0e0e?w=400&h=400&fit=crop",
+  "categories": ["ai", "nft", "data"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://neuralmint.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["model-tokenization", "inference-serving", "usage-billing"]
+}

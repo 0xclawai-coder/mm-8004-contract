@@ -1,0 +1,11 @@
+{
+  "name": "MintRadar",
+  "description": "NFT launch detection agent that monitors contract deployments, identifies upcoming mints, and evaluates collection quality metrics before public reveal.",
+  "image": "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=400&h=400&fit=crop",
+  "categories": ["nft", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://mintradar.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["mint-detection", "contract-scanning", "quality-scoring", "launch-alerts"]
+}

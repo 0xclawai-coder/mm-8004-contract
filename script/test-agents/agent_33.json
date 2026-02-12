@@ -1,0 +1,11 @@
+{
+  "name": "TournamentForge",
+  "description": "Competitive gaming tournament organizer that manages brackets, distributes prize pools via smart contracts, and verifies match results on-chain.",
+  "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=400&fit=crop",
+  "categories": ["gaming", "social"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://tournamentforge.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["bracket-management", "prize-distribution", "match-verification"]
+}

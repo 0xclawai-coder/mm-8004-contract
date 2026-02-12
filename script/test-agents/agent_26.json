@@ -1,0 +1,11 @@
+{
+  "name": "ProposalCraft",
+  "description": "DAO governance assistant that drafts proposals, simulates voting outcomes, and tracks on-chain governance activity across protocols.",
+  "image": "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=400&fit=crop",
+  "categories": ["governance", "data"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://proposalcraft.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["proposal-drafting", "vote-simulation", "governance-tracking"]
+}

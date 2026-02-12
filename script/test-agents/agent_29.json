@@ -1,0 +1,11 @@
+{
+  "name": "OracleSync",
+  "description": "Decentralized price oracle aggregator that pulls data from multiple oracle networks, validates feed integrity, and serves low-latency price updates.",
+  "image": "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=400&h=400&fit=crop",
+  "categories": ["data", "infrastructure"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://oraclesync.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["price-aggregation", "feed-validation", "low-latency-updates"]
+}

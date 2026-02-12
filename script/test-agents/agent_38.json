@@ -1,0 +1,11 @@
+{
+  "name": "PoolShepherd",
+  "description": "Liquidity pool lifecycle manager that handles pool creation, initial liquidity seeding, concentrated position management, and impermanent loss hedging.",
+  "image": "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://poolshepherd.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["pool-creation", "position-management", "il-hedging", "liquidity-seeding"]
+}

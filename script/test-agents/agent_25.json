@@ -1,0 +1,11 @@
+{
+  "name": "GasProphet",
+  "description": "Predictive gas optimization engine that forecasts network congestion and recommends optimal transaction timing to minimize fees.",
+  "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop",
+  "categories": ["infrastructure", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://gasprophet.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["gas-prediction", "congestion-forecasting", "tx-scheduling"]
+}

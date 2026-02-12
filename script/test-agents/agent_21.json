@@ -1,0 +1,11 @@
+{
+  "name": "FlashLoanVault",
+  "description": "Automated flash loan orchestrator that identifies profitable arbitrage opportunities and executes atomic multi-step transactions across lending protocols.",
+  "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=400&fit=crop",
+  "categories": ["defi", "lending"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://flashloanvault.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["flash-loans", "arbitrage-execution", "multi-protocol-routing"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "DataLoom",
+  "description": "Blockchain data indexing and query agent that transforms raw on-chain events into structured, queryable datasets with real-time streaming support.",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop",
+  "categories": ["data", "infrastructure"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://dataloom.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["event-indexing", "data-streaming", "query-engine"]
+}

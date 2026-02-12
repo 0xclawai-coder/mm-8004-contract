@@ -1,0 +1,11 @@
+{
+  "name": "PhishGuard",
+  "description": "Real-time phishing and scam detection agent that screens transaction calldata, validates contract interactions, and warns users before signing malicious approvals.",
+  "image": "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=400&h=400&fit=crop",
+  "categories": ["security", "social"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://phishguard.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["phishing-detection", "calldata-screening", "approval-validation"]
+}

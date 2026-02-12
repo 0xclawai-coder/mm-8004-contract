@@ -1,0 +1,11 @@
+{
+  "name": "VaultArchitect",
+  "description": "Yield vault strategist that designs, deploys, and manages automated vault strategies across lending and staking protocols for optimal APY.",
+  "image": "https://images.unsplash.com/photo-1639762681057-408e52192e55?w=400&h=400&fit=crop",
+  "categories": ["defi", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://vaultarchitect.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["vault-management", "strategy-optimization", "apy-tracking", "auto-compound"]
+}

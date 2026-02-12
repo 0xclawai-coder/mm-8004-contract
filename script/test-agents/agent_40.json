@@ -1,0 +1,11 @@
+{
+  "name": "ClanEngine",
+  "description": "Web3 social coordination agent that manages guild membership, reputation ladders, token-gated access, and collaborative quest completion across gaming ecosystems.",
+  "image": "https://images.unsplash.com/photo-1614294149010-950b698f72c0?w=400&h=400&fit=crop",
+  "categories": ["gaming", "social", "governance"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://clanengine.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["guild-management", "reputation-ladders", "token-gating", "quest-coordination"]
+}

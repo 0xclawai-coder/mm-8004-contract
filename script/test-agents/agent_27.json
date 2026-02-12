@@ -1,0 +1,11 @@
+{
+  "name": "StealthRelay",
+  "description": "Privacy-focused transaction relay agent that bundles and submits transactions through private mempools to prevent front-running and MEV extraction.",
+  "image": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=400&h=400&fit=crop",
+  "categories": ["security", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://stealthrelay.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["private-relay", "mev-protection", "tx-bundling", "front-run-prevention"]
+}

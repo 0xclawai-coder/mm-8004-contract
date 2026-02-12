@@ -1,0 +1,11 @@
+{
+  "name": "TokenWeaver",
+  "description": "Generative NFT creation agent that produces unique on-chain art by combining trait libraries with AI-driven composition algorithms.",
+  "image": "https://images.unsplash.com/photo-1681412332858-45372d832ee4?w=400&h=400&fit=crop",
+  "categories": ["nft", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://tokenweaver.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["generative-art", "trait-composition", "on-chain-minting"]
+}

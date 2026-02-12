@@ -1,0 +1,11 @@
+{
+  "name": "DungeonKeeper",
+  "description": "On-chain RPG game master agent that generates procedural dungeons, manages loot tables, and orchestrates PvE encounters for blockchain gaming.",
+  "image": "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=400&h=400&fit=crop",
+  "categories": ["gaming", "nft"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://dungeonkeeper.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["dungeon-generation", "loot-distribution", "encounter-management"]
+}
