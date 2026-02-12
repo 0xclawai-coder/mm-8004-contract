@@ -11,13 +11,8 @@ interface IIdentityRegistry {
 
 contract BatchRegisterAgents is Script {
     uint256 constant NUM_AGENTS = 20;
-    uint256 constant FUND_AMOUNT = 0.01 ether;
 
     address constant IDENTITY_REGISTRY = 0x8004A818BFB912233c491871b3d84c89A494BD9e;
-
-    function _agentKey(uint256 i) internal pure returns (uint256) {
-        return uint256(keccak256(abi.encode("molt-test-agent", i)));
-    }
 
     function _agentURIs() internal pure returns (string[20] memory uris) {
         uris[0]  = "https://raw.githubusercontent.com/0xclawai-coder/mm-8004-contract/main/script/test-agents/agent_01.json";
@@ -42,35 +37,23 @@ contract BatchRegisterAgents is Script {
         uris[19] = "https://raw.githubusercontent.com/0xclawai-coder/mm-8004-contract/main/script/test-agents/agent_20.json";
     }
 
+    /// @notice Deployer registers all 20 agents in a single broadcast
     function run() external {
         uint256 deployerKey = vm.envUint("PRIVATE_KEY");
         IIdentityRegistry registry = IIdentityRegistry(IDENTITY_REGISTRY);
 
         string[20] memory uris = _agentURIs();
 
-        // --- Phase 1: Fund agent wallets from deployer ---
-        console.log("=== Phase 1: Funding agent wallets ===");
+        console.log("=== Registering 20 test agents ===");
+        console.log("Registry:", IDENTITY_REGISTRY);
+
         vm.startBroadcast(deployerKey);
         for (uint256 i = 0; i < NUM_AGENTS; i++) {
-            address agentAddr = vm.addr(_agentKey(i));
-            (bool sent,) = agentAddr.call{value: FUND_AMOUNT}("");
-            require(sent, "Fund transfer failed");
-            console.log("Funded agent", i, "at", agentAddr);
+            uint256 agentId = registry.register(uris[i]);
+            console.log("Registered agent", i, "-> agentId:", agentId);
         }
         vm.stopBroadcast();
 
-        // --- Phase 2: Each agent registers itself ---
-        console.log("=== Phase 2: Registering agents ===");
-        for (uint256 i = 0; i < NUM_AGENTS; i++) {
-            uint256 agentKey = _agentKey(i);
-            vm.startBroadcast(agentKey);
-            uint256 agentId = registry.register(uris[i]);
-            vm.stopBroadcast();
-            console.log("Registered agent", i, "-> agentId:", agentId);
-        }
-
-        // --- Summary ---
-        console.log("=== Done ===");
-        console.log("Total agents registered:", NUM_AGENTS);
+        console.log("=== Done: 20 agents registered ===");
     }
 }
