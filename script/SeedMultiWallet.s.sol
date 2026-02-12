@@ -7,7 +7,6 @@ import {MoltMarketplace} from "../src/MoltMarketplace.sol";
 
 interface IIdentityRegistry {
     function register(string calldata agentURI) external returns (uint256 agentId);
-    function totalSupply() external view returns (uint256);
     function setApprovalForAll(address operator, bool approved) external;
     function isApprovedForAll(address owner, address operator) external view returns (bool);
     function transferFrom(address from, address to, uint256 tokenId) external;
@@ -66,9 +65,6 @@ contract SeedMultiWallet is Script {
 
         IIdentityRegistry registry = IIdentityRegistry(NFT);
         (, address[4] memory addrs) = _wallets();
-
-        uint256 supplyBefore = registry.totalSupply();
-        console.log("Current totalSupply:", supplyBefore);
 
         // ── Register 20 new agents ──
         vm.startBroadcast(deployerKey);
@@ -253,12 +249,9 @@ contract SeedMultiWallet is Script {
     }
 
     /// @notice Convenience: run both phases (requires --slow flag)
-    function run() external {
+    /// @param firstTokenId The expected first token ID (check phase1 logs)
+    function run(uint256 firstTokenId) external {
         this.phase1();
-        // Read the first token ID from totalSupply
-        uint256 total = IIdentityRegistry(NFT).totalSupply();
-        uint256 firstTokenId = total - 19; // We just registered 20
-        console.log("Auto-detected firstTokenId: %d", firstTokenId);
         this.phase2(firstTokenId);
     }
 }

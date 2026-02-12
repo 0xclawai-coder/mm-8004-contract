@@ -14,7 +14,18 @@
 #   bash script/seed-bulk.sh all          # Run everything
 # ============================================================
 
-set -e
+# Don't use set -e — we want to continue on transient failures
+
+# Source .env if not already set
+SCRIPT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+if [ -z "$PRIVATE_KEY" ] && [ -f "$SCRIPT_DIR/.env" ]; then
+  source "$SCRIPT_DIR/.env"
+fi
+
+if [ -z "$PRIVATE_KEY" ] || [ -z "$RPC_URL" ]; then
+  echo "ERROR: PRIVATE_KEY and RPC_URL must be set. Run: source .env"
+  exit 1
+fi
 
 NFT="0x8004A818BFB912233c491871b3d84c89A494BD9e"
 MARKETPLACE="0x0fd6B881b208d2b0b7Be11F1eB005A2873dD5D2e"
@@ -61,7 +72,7 @@ send() {
     sleep 2
   done
   echo "  FAILED after 3 attempts: $sig $@"
-  return 1
+  return 0  # continue despite failure
 }
 
 # ─── Step 1: Register 100 agents ─────────────────────────────
