@@ -3,9 +3,10 @@ pragma solidity ^0.8.28;
 
 import {Test, console} from "forge-std/Test.sol";
 import {MoltMarketplace} from "../src/MoltMarketplace.sol";
+import {MoltMarketplaceProxy} from "../src/MoltMarketplaceProxy.sol";
 import {IMoltMarketplace} from "../src/interfaces/IMoltMarketplace.sol";
 import {IAccessControl} from "@openzeppelin/contracts/access/IAccessControl.sol";
-import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
+import {PausableUpgradeable} from "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import {MockIdentityRegistry} from "./mocks/MockIdentityRegistry.sol";
 import {MockERC20} from "./mocks/MockERC20.sol";
 
@@ -29,9 +30,11 @@ contract MoltMarketplace8004Test is Test {
     uint256 public agentId0; // alice's agent
 
     function setUp() public {
-        // Deploy marketplace
-        vm.prank(owner);
-        marketplace = new MoltMarketplace(owner, feeRecipient, PLATFORM_FEE_BPS);
+        // Deploy marketplace via proxy
+        MoltMarketplace impl = new MoltMarketplace();
+        bytes memory initData = abi.encodeCall(MoltMarketplace.initialize, (owner, feeRecipient, PLATFORM_FEE_BPS));
+        MoltMarketplaceProxy proxy = new MoltMarketplaceProxy(address(impl), initData);
+        marketplace = MoltMarketplace(payable(address(proxy)));
 
         // Deploy mock 8004 registry
         registry = new MockIdentityRegistry();
@@ -780,7 +783,7 @@ contract MoltMarketplace8004Test is Test {
 
         vm.startPrank(alice);
         registry.approve(address(marketplace), agentId0);
-        vm.expectRevert(Pausable.EnforcedPause.selector);
+        vm.expectRevert(PausableUpgradeable.EnforcedPause.selector);
         marketplace.list(address(registry), agentId0, address(0), LISTING_PRICE, block.timestamp + 1 days);
         vm.stopPrank();
 

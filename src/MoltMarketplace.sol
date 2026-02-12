@@ -6,16 +6,17 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {IERC2981} from "./interfaces/IERC2981.sol";
 import {IMoltMarketplace} from "./interfaces/IMoltMarketplace.sol";
-import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
-import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
+import {AccessControlUpgradeable} from "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import {PausableUpgradeable} from "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 /// @title MoltMarketplace - ERC-721 NFT Marketplace
 /// @notice Fixed-price listings, offers, collection offers, English auctions,
 ///         Dutch auctions, bundle listings. Native + ERC-20 payments.
 /// @dev Platform fee is dynamic (admin-configurable) with a hard cap of 10%.
 ///      Uses OpenZeppelin AccessControl, Pausable, and ReentrancyGuard.
-contract MoltMarketplace is IMoltMarketplace, AccessControl, Pausable, ReentrancyGuard {
+contract MoltMarketplace is IMoltMarketplace, AccessControlUpgradeable, PausableUpgradeable, ReentrancyGuard, UUPSUpgradeable {
     using SafeERC20 for IERC20;
 
     // ──────────────────── Constants ────────────────────
@@ -33,12 +34,12 @@ contract MoltMarketplace is IMoltMarketplace, AccessControl, Pausable, Reentranc
     address public override feeRecipient;
     uint256 public override platformFeeBps;
 
-    uint256 private _nextListingId = 1;
-    uint256 private _nextOfferId = 1;
-    uint256 private _nextCollectionOfferId = 1;
-    uint256 private _nextAuctionId = 1;
-    uint256 private _nextDutchAuctionId = 1;
-    uint256 private _nextBundleId = 1;
+    uint256 private _nextListingId;
+    uint256 private _nextOfferId;
+    uint256 private _nextCollectionOfferId;
+    uint256 private _nextAuctionId;
+    uint256 private _nextDutchAuctionId;
+    uint256 private _nextBundleId;
 
     mapping(uint256 => Listing) private _listings;
     mapping(uint256 => Offer) private _offers;
@@ -56,12 +57,20 @@ contract MoltMarketplace is IMoltMarketplace, AccessControl, Pausable, Reentranc
         _;
     }
 
-    // ──────────────────── Constructor ────────────────────
+    // ──────────────────── Constructor / Initializer ────────────────────
 
-    constructor(address initialAdmin, address _feeRecipient, uint256 _platformFeeBps) {
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
+    function initialize(address initialAdmin, address _feeRecipient, uint256 _platformFeeBps) external initializer {
         require(initialAdmin != address(0), "Zero admin");
         require(_platformFeeBps <= MAX_PLATFORM_FEE_BPS, "Fee exceeds max");
         require(_feeRecipient != address(0), "Zero address");
+
+        __AccessControl_init();
+        __Pausable_init();
 
         _grantRole(DEFAULT_ADMIN_ROLE, initialAdmin);
         _grantRole(PAUSER_ROLE, initialAdmin);
@@ -70,7 +79,16 @@ contract MoltMarketplace is IMoltMarketplace, AccessControl, Pausable, Reentranc
 
         feeRecipient = _feeRecipient;
         platformFeeBps = _platformFeeBps;
+
+        _nextListingId = 1;
+        _nextOfferId = 1;
+        _nextCollectionOfferId = 1;
+        _nextAuctionId = 1;
+        _nextDutchAuctionId = 1;
+        _nextBundleId = 1;
     }
+
+    function _authorizeUpgrade(address) internal override onlyRole(DEFAULT_ADMIN_ROLE) {}
 
     // ══════════════════════════════════════════════════════
     //                      LISTING

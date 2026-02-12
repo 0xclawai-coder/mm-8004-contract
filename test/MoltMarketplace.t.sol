@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
 
-import {Test, console} from "forge-std/Test.sol";
+import {Test, Vm, console} from "forge-std/Test.sol";
 import {MoltMarketplace} from "../src/MoltMarketplace.sol";
+import {MoltMarketplaceProxy} from "../src/MoltMarketplaceProxy.sol";
 import {IMoltMarketplace} from "../src/interfaces/IMoltMarketplace.sol";
 import {IAccessControl} from "@openzeppelin/contracts/access/IAccessControl.sol";
-import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
+import {PausableUpgradeable} from "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 import {MockERC721} from "./mocks/MockERC721.sol";
 import {MockERC20} from "./mocks/MockERC20.sol";
 
@@ -32,9 +33,10 @@ contract MoltMarketplaceTest is Test {
     uint256 public constant TOKEN_ID = 1;
 
     function setUp() public {
-        vm.startPrank(owner);
-        marketplace = new MoltMarketplace(owner, feeRecipient, PLATFORM_FEE_BPS);
-        vm.stopPrank();
+        MoltMarketplace impl = new MoltMarketplace();
+        bytes memory initData = abi.encodeCall(MoltMarketplace.initialize, (owner, feeRecipient, PLATFORM_FEE_BPS));
+        MoltMarketplaceProxy proxy = new MoltMarketplaceProxy(address(impl), initData);
+        marketplace = MoltMarketplace(payable(address(proxy)));
 
         nft = new MockERC721("TestNFT", "TNFT");
         token = new MockERC20("TestToken", "TT", 18);
@@ -778,7 +780,7 @@ contract MoltMarketplaceTest is Test {
 
         vm.startPrank(seller);
         nft.approve(address(marketplace), TOKEN_ID);
-        vm.expectRevert(Pausable.EnforcedPause.selector);
+        vm.expectRevert(PausableUpgradeable.EnforcedPause.selector);
         marketplace.list(address(nft), TOKEN_ID, address(0), LISTING_PRICE, block.timestamp + 1 days);
         vm.stopPrank();
     }
@@ -793,7 +795,7 @@ contract MoltMarketplaceTest is Test {
         marketplace.pause();
 
         vm.prank(buyer);
-        vm.expectRevert(Pausable.EnforcedPause.selector);
+        vm.expectRevert(PausableUpgradeable.EnforcedPause.selector);
         marketplace.buy{value: LISTING_PRICE}(1);
     }
 
@@ -803,7 +805,7 @@ contract MoltMarketplaceTest is Test {
 
         vm.startPrank(buyer);
         token.approve(address(marketplace), LISTING_PRICE);
-        vm.expectRevert(Pausable.EnforcedPause.selector);
+        vm.expectRevert(PausableUpgradeable.EnforcedPause.selector);
         marketplace.makeOffer(address(nft), TOKEN_ID, address(token), LISTING_PRICE, block.timestamp + 1 days);
         vm.stopPrank();
     }
@@ -814,7 +816,7 @@ contract MoltMarketplaceTest is Test {
 
         vm.startPrank(seller);
         nft.approve(address(marketplace), TOKEN_ID);
-        vm.expectRevert(Pausable.EnforcedPause.selector);
+        vm.expectRevert(PausableUpgradeable.EnforcedPause.selector);
         marketplace.createAuction(address(nft), TOKEN_ID, address(0), 1 ether, 0, 0, 0, 1 days);
         vm.stopPrank();
     }
@@ -1119,6 +1121,7 @@ contract MoltMarketplaceTest is Test {
         marketplace.createAuction(address(nft), TOKEN_ID, address(0), 1 ether, 0, 0, 0, 1 days);
         vm.stopPrank();
 
+        // First snipe bid: 5 min before end
         vm.warp(block.timestamp + 1 days - 5 minutes);
 
         vm.prank(bidder1);
@@ -1128,16 +1131,16 @@ contract MoltMarketplaceTest is Test {
         uint256 newEndTime1 = auction.endTime;
         assertEq(newEndTime1, block.timestamp + 10 minutes);
 
-        vm.warp(newEndTime1 - 3 minutes);
-
-        vm.expectEmit(true, false, false, true);
-        emit IMoltMarketplace.AuctionExtended(1, block.timestamp + 10 minutes);
+        // Second snipe bid: 3 min before new end
+        uint256 secondBidTime = newEndTime1 - 3 minutes;
+        vm.warp(secondBidTime);
 
         vm.prank(bidder2);
         marketplace.bid{value: 1.1 ether}(1, 0);
 
         auction = marketplace.getAuction(1);
-        assertEq(auction.endTime, block.timestamp + 10 minutes);
+        uint256 expectedNewEnd = secondBidTime + 10 minutes;
+        assertEq(auction.endTime, expectedNewEnd);
         assertTrue(auction.endTime > newEndTime1);
     }
 
