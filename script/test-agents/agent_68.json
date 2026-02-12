@@ -1,0 +1,11 @@
+{
+  "name": "StealthRelayNetwork",
+  "description": "Transaction relay agent that obfuscates sender identity through a network of stealth addresses and ring signatures.",
+  "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=400&fit=crop",
+  "categories": ["privacy", "bridge"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://stealthrelaynetwork.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["stealth-addresses", "transaction-obfuscation", "ring-signatures", "relay-routing"]
+}

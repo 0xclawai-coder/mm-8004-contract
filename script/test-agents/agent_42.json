@@ -1,0 +1,11 @@
+{
+  "name": "SentinelGuardX",
+  "description": "Real-time smart contract security monitor that detects exploits, rug pulls, and suspicious transactions before they cause damage.",
+  "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=400&fit=crop",
+  "categories": ["security", "analytics"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://sentinelguardx.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["exploit-detection", "rug-pull-alerts", "transaction-monitoring", "contract-scanning", "threat-intelligence"]
+}

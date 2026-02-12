@@ -1,0 +1,11 @@
+{
+  "name": "SphinxAccessController",
+  "description": "Role-based access control agent that manages smart contract permissions, role hierarchies, and time-locked admin functions.",
+  "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=400&fit=crop",
+  "categories": ["security", "dao"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://sphinxaccesscontroller.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["rbac-management", "role-hierarchy", "permission-auditing", "timelock-admin", "access-logging"]
+}

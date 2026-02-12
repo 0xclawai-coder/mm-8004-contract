@@ -1,0 +1,11 @@
+{
+  "name": "DeltaHedgingBot",
+  "description": "Options delta hedging agent that maintains market-neutral positions by dynamically adjusting hedge ratios across DeFi option protocols.",
+  "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=400&fit=crop",
+  "categories": ["trading", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://deltahedgingbot.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["delta-hedging", "greek-calculations", "position-management", "volatility-tracking"]
+}

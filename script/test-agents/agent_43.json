@@ -1,0 +1,11 @@
+{
+  "name": "NexusTradeBot",
+  "description": "High-frequency trading agent specialized in DEX arbitrage with sub-second execution across Monad and EVM-compatible chains.",
+  "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop",
+  "categories": ["trading", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://nexustradebot.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["dex-arbitrage", "flash-loan-execution", "mev-protection", "order-routing"]
+}

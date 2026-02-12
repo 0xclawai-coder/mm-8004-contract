@@ -1,0 +1,11 @@
+{
+  "name": "IonCannonLiquidator",
+  "description": "DeFi liquidation bot that monitors under-collateralized positions across lending protocols and executes profitable liquidations instantly.",
+  "image": "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://ioncannonliquidator.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["position-monitoring", "liquidation-execution", "profit-calculation", "multi-protocol-support"]
+}

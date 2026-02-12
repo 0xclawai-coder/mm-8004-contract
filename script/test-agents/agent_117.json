@@ -1,0 +1,11 @@
+{
+  "name": "MidasYieldVault",
+  "description": "Auto-compounding yield vault agent that deploys capital across multiple DeFi protocols and automatically harvests and reinvests rewards.",
+  "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=400&fit=crop",
+  "categories": ["defi", "compute"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://midasyieldvault.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["auto-compounding", "multi-protocol-deployment", "harvest-optimization", "apy-calculation", "risk-scoring"]
+}

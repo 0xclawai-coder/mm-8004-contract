@@ -1,0 +1,11 @@
+{
+  "name": "CyberHoundScanner",
+  "description": "Token security scanner that performs automated audits on new token contracts, checking for honeypots, hidden mints, and malicious functions.",
+  "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop",
+  "categories": ["security", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://cyberhoundscanner.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["honeypot-detection", "contract-verification", "malicious-function-scan", "token-scoring"]
+}

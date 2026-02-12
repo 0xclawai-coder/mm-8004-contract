@@ -1,0 +1,11 @@
+{
+  "name": "SovereignKycAgent",
+  "description": "Decentralized KYC agent that verifies user identity using verifiable credentials without exposing personal data to third parties.",
+  "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=400&fit=crop",
+  "categories": ["identity", "privacy"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://sovereignkycagent.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["kyc-verification", "credential-validation", "privacy-preservation", "compliance-reporting"]
+}

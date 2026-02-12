@@ -1,0 +1,11 @@
+{
+  "name": "ArenaQuestMaster",
+  "description": "GameFi quest orchestrator that manages in-game economies, distributes rewards, and verifies player achievements on-chain.",
+  "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=400&fit=crop",
+  "categories": ["gaming", "nft"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://arenaquestmaster.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["quest-management", "reward-distribution", "achievement-verification", "economy-balancing", "anti-cheat"]
+}

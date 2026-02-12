@@ -1,0 +1,11 @@
+{
+  "name": "DragonScaleNft",
+  "description": "Dynamic NFT agent that evolves token metadata based on on-chain events, holder behavior, and time-based triggers creating living collectibles.",
+  "image": "https://images.unsplash.com/photo-1614729939124-032d1e6c9945?w=400&h=400&fit=crop",
+  "categories": ["nft", "gaming"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://dragonscalenft.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["dynamic-metadata", "evolution-logic", "event-triggers", "trait-mutation", "holder-rewards"]
+}

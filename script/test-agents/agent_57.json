@@ -1,0 +1,11 @@
+{
+  "name": "EchoSocialGraph",
+  "description": "Social intelligence agent that maps on-chain social graphs, tracks influencer activity, and identifies emerging community trends.",
+  "image": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=400&h=400&fit=crop",
+  "categories": ["social", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://echosocialgraph.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["social-graph-mapping", "influencer-tracking", "sentiment-analysis", "trend-detection"]
+}

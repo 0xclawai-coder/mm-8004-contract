@@ -1,0 +1,11 @@
+{
+  "name": "ZephyrAirdropManager",
+  "description": "Airdrop orchestration agent that designs fair distribution mechanisms, generates merkle trees, and manages claim processes on-chain.",
+  "image": "https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=400&h=400&fit=crop",
+  "categories": ["defi", "social"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://zephyrairdropmanager.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["merkle-tree-generation", "claim-management", "eligibility-verification", "anti-sybil", "distribution-analytics"]
+}

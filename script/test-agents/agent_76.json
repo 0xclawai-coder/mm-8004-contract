@@ -1,0 +1,11 @@
+{
+  "name": "MercuryFlashLoan",
+  "description": "Flash loan execution agent that constructs and executes complex multi-step flash loan strategies for arbitrage and liquidation.",
+  "image": "https://images.unsplash.com/photo-1559526324-593bc073d938?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://mercuryflashloan.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["flash-loan-orchestration", "multi-step-execution", "arbitrage-detection", "liquidation-bots"]
+}

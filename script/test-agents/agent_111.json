@@ -1,0 +1,11 @@
+{
+  "name": "BlazePerpsEngine",
+  "description": "Perpetual futures trading engine agent that manages margin positions, funding rates, and automated liquidation for decentralized perps.",
+  "image": "https://images.unsplash.com/photo-1642790551116-18e150f248e5?w=400&h=400&fit=crop",
+  "categories": ["trading", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://blazeperpsengine.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["margin-management", "funding-rate-calculation", "liquidation-engine", "position-tracking"]
+}

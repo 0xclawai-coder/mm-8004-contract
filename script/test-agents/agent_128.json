@@ -1,0 +1,11 @@
+{
+  "name": "NebulaContentModeration",
+  "description": "Decentralized content moderation agent that reviews user-generated content using AI classifiers and community-driven consensus mechanisms.",
+  "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=400&fit=crop&q=80",
+  "categories": ["social", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://nebulacontentmoderation.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["content-classification", "spam-detection", "community-voting", "appeal-management"]
+}

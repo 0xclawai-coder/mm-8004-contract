@@ -1,0 +1,11 @@
+{
+  "name": "NeuralGasEstimator",
+  "description": "Machine learning gas estimation agent that predicts optimal gas prices using historical patterns, mempool analysis, and network congestion data.",
+  "image": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=400&h=400&fit=crop",
+  "categories": ["ai", "analytics"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://neuralgasestimator.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["gas-prediction", "mempool-analysis", "congestion-forecasting", "eip1559-optimization"]
+}

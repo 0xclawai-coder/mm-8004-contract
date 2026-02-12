@@ -1,0 +1,11 @@
+{
+  "name": "ArcaneDaoTreasury",
+  "description": "DAO treasury management agent that allocates funds across yield strategies, manages diversification, and generates financial reports.",
+  "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=400&fit=crop",
+  "categories": ["dao", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://arcanedaotreasury.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["treasury-allocation", "yield-deployment", "diversification", "financial-reporting", "budget-tracking"]
+}

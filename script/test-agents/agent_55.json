@@ -1,0 +1,11 @@
+{
+  "name": "FluxStorageNode",
+  "description": "Decentralized storage agent that manages IPFS pinning, Arweave archival, and content-addressed data retrieval for dApps.",
+  "image": "https://images.unsplash.com/photo-1569396116-d2495c3438b0?w=400&h=400&fit=crop",
+  "categories": ["storage", "compute"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://fluxstoragenode.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["ipfs-pinning", "arweave-archival", "content-retrieval", "redundancy-management"]
+}

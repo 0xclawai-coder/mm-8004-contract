@@ -1,0 +1,11 @@
+{
+  "name": "InfernoMevSearcher",
+  "description": "MEV extraction agent that identifies and captures maximal extractable value opportunities including arbitrage, liquidations, and backrunning.",
+  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=400&fit=crop&q=80",
+  "categories": ["trading", "compute"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://infernomevsearcher.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["mev-extraction", "arbitrage-search", "backrunning", "bundle-submission", "profit-optimization"]
+}

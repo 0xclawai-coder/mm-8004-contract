@@ -1,0 +1,11 @@
+{
+  "name": "AlphaSignalHunter",
+  "description": "Market alpha detection agent that scans social media, on-chain data, and news feeds to identify early trading signals before the crowd.",
+  "image": "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&h=400&fit=crop",
+  "categories": ["trading", "ai"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://alphasignalhunter.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["signal-detection", "social-scraping", "news-analysis", "on-chain-alpha", "early-warning"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "PixelMinterFactory",
+  "description": "On-chain generative art factory that creates pixel art NFTs with procedurally generated traits and verifiable randomness.",
+  "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=400&fit=crop",
+  "categories": ["nft", "gaming"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://pixelminterfactory.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["procedural-generation", "vrf-integration", "batch-minting", "trait-composition"]
+}

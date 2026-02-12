@@ -1,0 +1,11 @@
+{
+  "name": "VelocityPaymentChannel",
+  "description": "Payment channel agent that manages state channels for instant, zero-fee micro-transactions with on-chain settlement guarantees.",
+  "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=400&fit=crop",
+  "categories": ["defi", "bridge"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://velocitypaymentchannel.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["channel-management", "instant-settlement", "micro-payments", "dispute-resolution"]
+}

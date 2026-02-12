@@ -1,0 +1,11 @@
+{
+  "name": "SpectrumArtCurator",
+  "description": "AI art curation agent that evaluates NFT collections, identifies undervalued pieces, and builds curated galleries based on aesthetic analysis.",
+  "image": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=400&h=400&fit=crop",
+  "categories": ["nft", "ai"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://spectrumartcurator.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["aesthetic-scoring", "valuation-analysis", "gallery-curation", "trend-prediction"]
+}

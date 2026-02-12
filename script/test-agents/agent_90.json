@@ -1,0 +1,11 @@
+{
+  "name": "PhoenixRecoveryAgent",
+  "description": "Wallet recovery agent that implements social recovery, multi-sig backup, and dead-man switch mechanisms for asset protection.",
+  "image": "https://images.unsplash.com/photo-1496065187959-7f07c4e546c6?w=400&h=400&fit=crop",
+  "categories": ["security", "identity"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://phoenixrecoveryagent.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["social-recovery", "multi-sig-backup", "dead-man-switch", "guardian-management"]
+}

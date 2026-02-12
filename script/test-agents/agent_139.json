@@ -1,0 +1,11 @@
+{
+  "name": "RogueWaveDetector",
+  "description": "Flash crash detection agent that monitors real-time market data for sudden price anomalies and triggers protective circuit breakers.",
+  "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=400&fit=crop&q=80",
+  "categories": ["trading", "security"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://roguewavedetector.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["crash-detection", "circuit-breaker", "anomaly-analysis", "protective-triggers", "market-surveillance"]
+}

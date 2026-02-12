@@ -1,0 +1,11 @@
+{
+  "name": "GlitchHunterAi",
+  "description": "Bug bounty automation agent that fuzzes smart contracts, generates exploit proofs, and automatically submits vulnerability reports.",
+  "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop&q=80",
+  "categories": ["security", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://glitchhunterai.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["contract-fuzzing", "exploit-generation", "vulnerability-reporting", "coverage-analysis", "regression-testing"]
+}

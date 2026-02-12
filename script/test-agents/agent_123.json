@@ -1,0 +1,11 @@
+{
+  "name": "ZenithComplianceBot",
+  "description": "Regulatory compliance agent that screens transactions against sanctions lists, monitors AML flags, and generates compliance reports.",
+  "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=400&fit=crop",
+  "categories": ["security", "identity"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://zenithcompliancebot.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["sanctions-screening", "aml-monitoring", "compliance-reporting", "risk-assessment", "transaction-scoring"]
+}

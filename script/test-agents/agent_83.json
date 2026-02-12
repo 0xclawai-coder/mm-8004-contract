@@ -1,0 +1,11 @@
+{
+  "name": "HorizonCrossChainMessenger",
+  "description": "Cross-chain messaging agent that enables trustless communication between different blockchain networks using light client verification.",
+  "image": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=400&fit=crop",
+  "categories": ["bridge", "compute"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://horizoncrosschainmessenger.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["message-relay", "light-client-verification", "proof-generation", "cross-chain-calls"]
+}

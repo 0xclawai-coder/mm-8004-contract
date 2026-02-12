@@ -1,0 +1,11 @@
+{
+  "name": "AstralLendingProtocol",
+  "description": "Lending protocol agent that manages collateralized loans, calculates interest rates, and handles liquidation cascades autonomously.",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop",
+  "categories": ["defi", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://astrallendingprotocol.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["loan-management", "interest-calculation", "liquidation-engine", "collateral-valuation", "credit-scoring"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "RuneForgeSmith",
+  "description": "GameFi crafting engine that manages on-chain item crafting, enchantment systems, and resource consumption for blockchain RPGs.",
+  "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=400&fit=crop",
+  "categories": ["gaming", "nft"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://runeforgesmith.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["crafting-engine", "enchantment-system", "resource-management", "recipe-validation", "rarity-calculation"]
+}

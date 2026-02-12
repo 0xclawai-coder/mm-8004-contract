@@ -1,0 +1,11 @@
+{
+  "name": "TorrentSyncDaemon",
+  "description": "Distributed file synchronization agent that keeps decentralized storage nodes in sync with content-addressed data verification.",
+  "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=400&fit=crop",
+  "categories": ["storage", "compute"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://torrentsyncdaemon.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["file-sync", "content-verification", "node-discovery", "bandwidth-optimization"]
+}

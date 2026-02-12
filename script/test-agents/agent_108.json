@@ -1,0 +1,11 @@
+{
+  "name": "KrakenDepthMapper",
+  "description": "Order book depth analysis agent that visualizes liquidity distribution, identifies support/resistance levels, and detects spoofing on DEXes.",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop&q=80",
+  "categories": ["trading", "analytics"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://krakendepthmapper.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["depth-analysis", "support-resistance-detection", "spoofing-detection", "liquidity-heatmap"]
+}

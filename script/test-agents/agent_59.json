@@ -1,0 +1,11 @@
+{
+  "name": "HyperLedgerIndexer",
+  "description": "Blockchain indexing agent that crawls, decodes, and indexes on-chain events into queryable databases for analytics platforms.",
+  "image": "https://images.unsplash.com/photo-1605792657660-596af9009e82?w=400&h=400&fit=crop",
+  "categories": ["analytics", "compute"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://hyperledgerindexer.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["event-indexing", "abi-decoding", "real-time-sync", "historical-backfill"]
+}

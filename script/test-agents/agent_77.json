@@ -1,0 +1,11 @@
+{
+  "name": "VoxelWorldBuilder",
+  "description": "Metaverse construction agent that procedurally generates 3D voxel worlds, manages land parcels, and deploys in-game assets as NFTs.",
+  "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop",
+  "categories": ["gaming", "nft"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://voxelworldbuilder.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["world-generation", "land-management", "asset-deployment", "physics-simulation", "multiplayer-sync"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "LunarNodeOperator",
+  "description": "Autonomous node operation agent that manages validator infrastructure, monitors uptime, and handles key rotation and backup procedures.",
+  "image": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=400&fit=crop&q=80",
+  "categories": ["compute", "security"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://lunarnodeoperator.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["node-management", "uptime-monitoring", "key-rotation", "backup-automation", "performance-tuning"]
+}

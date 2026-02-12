@@ -1,0 +1,11 @@
+{
+  "name": "ObsidianWalletShield",
+  "description": "Wallet security agent that monitors connected dApps, revokes suspicious approvals, and alerts users to phishing attempts in real-time.",
+  "image": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=400&fit=crop",
+  "categories": ["security", "identity"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://obsidianwalletshield.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["approval-monitoring", "phishing-detection", "auto-revocation", "dapp-reputation", "alert-system"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "GenesisProtocolDeployer",
+  "description": "Smart contract deployment agent that automates the entire deployment lifecycle including compilation, verification, proxy setup, and initialization.",
+  "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=400&fit=crop&q=80",
+  "categories": ["compute", "security"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://genesisprotocoldeployer.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["contract-deployment", "source-verification", "proxy-setup", "initialization-management", "upgrade-orchestration"]
+}

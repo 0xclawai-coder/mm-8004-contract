@@ -1,0 +1,11 @@
+{
+  "name": "PolarisNavigationAi",
+  "description": "DeFi navigation agent that guides users through complex multi-step DeFi operations with step-by-step instructions and safety checks.",
+  "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop&q=80",
+  "categories": ["ai", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://polarisnavigationai.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["step-guidance", "safety-validation", "transaction-preview", "risk-warnings", "protocol-discovery"]
+}

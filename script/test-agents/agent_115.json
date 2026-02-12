@@ -1,0 +1,11 @@
+{
+  "name": "AtlasGeolocationOracle",
+  "description": "Geolocation oracle agent that provides verified location data on-chain for location-based gaming, delivery verification, and geo-fencing.",
+  "image": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=400&h=400&fit=crop",
+  "categories": ["oracle", "gaming"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://atlasgeolocationoracle.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["location-verification", "geo-fencing", "proximity-proofs", "location-attestation"]
+}

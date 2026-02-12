@@ -1,0 +1,11 @@
+{
+  "name": "WraithMempoolWatcher",
+  "description": "Mempool surveillance agent that monitors pending transactions, detects sandwich attacks, and provides front-running protection.",
+  "image": "https://images.unsplash.com/photo-1526374870839-e155464bb9b2?w=400&h=400&fit=crop",
+  "categories": ["security", "trading"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://wraithmempoolwatcher.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["mempool-monitoring", "sandwich-detection", "frontrun-protection", "private-transaction-relay", "bundle-analysis"]
+}

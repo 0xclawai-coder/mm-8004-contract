@@ -1,0 +1,11 @@
+{
+  "name": "IronCladFirewall",
+  "description": "Smart contract firewall agent that intercepts and validates transactions before execution, blocking known attack patterns in real-time.",
+  "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop",
+  "categories": ["security", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://ironcladfirewall.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["transaction-filtering", "attack-pattern-detection", "real-time-blocking", "whitelist-management"]
+}

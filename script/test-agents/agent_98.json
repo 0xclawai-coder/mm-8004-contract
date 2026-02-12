@@ -1,0 +1,11 @@
+{
+  "name": "SageMlPipeline",
+  "description": "On-chain machine learning pipeline agent that trains models on decentralized data and publishes verifiable inference results.",
+  "image": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=400&h=400&fit=crop",
+  "categories": ["ai", "compute"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://sagemlpipeline.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["model-training", "verifiable-inference", "data-preprocessing", "model-registry", "federated-learning"]
+}

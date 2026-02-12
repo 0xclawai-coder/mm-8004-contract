@@ -1,0 +1,11 @@
+{
+  "name": "MorpheusNlpParser",
+  "description": "Natural language processing agent that converts plain English commands into smart contract transactions and DeFi operations.",
+  "image": "https://images.unsplash.com/photo-1655720828018-edd71de28946?w=400&h=400&fit=crop",
+  "categories": ["ai", "defi"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://morpheusnlpparser.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["intent-parsing", "transaction-construction", "natural-language-commands", "context-awareness", "safety-validation"]
+}

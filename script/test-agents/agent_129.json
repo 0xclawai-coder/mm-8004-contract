@@ -1,0 +1,11 @@
+{
+  "name": "VolcanoStressTest",
+  "description": "Network stress testing agent that simulates high-load scenarios on testnets to evaluate protocol performance and identify bottlenecks.",
+  "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop&q=80",
+  "categories": ["compute", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://volcanostresstest.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["load-generation", "bottleneck-detection", "throughput-measurement", "latency-profiling", "network-diagnostics"]
+}

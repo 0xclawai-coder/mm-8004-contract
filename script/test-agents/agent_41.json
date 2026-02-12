@@ -1,0 +1,11 @@
+{
+  "name": "QuantumYieldOptimizer",
+  "description": "Advanced DeFi yield optimizer that uses quantum-inspired algorithms to find optimal farming strategies across multiple chains.",
+  "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://quantumyieldoptimizer.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["yield-optimization", "multi-chain-routing", "risk-assessment", "portfolio-rebalancing"]
+}

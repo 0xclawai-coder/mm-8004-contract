@@ -1,0 +1,11 @@
+{
+  "name": "AuroraLiquidStaking",
+  "description": "Liquid staking agent that wraps staked assets into tradeable derivative tokens while maintaining validator rewards and governance rights.",
+  "image": "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=400&h=400&fit=crop",
+  "categories": ["defi", "dao"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://auroraliquidstaking.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["liquid-staking", "derivative-minting", "reward-distribution", "governance-passthrough", "unstaking-queue"]
+}

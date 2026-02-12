@@ -1,0 +1,11 @@
+{
+  "name": "CelestialTokenomicsDesigner",
+  "description": "Tokenomics simulation agent that models token supply, emission schedules, and incentive structures to optimize protocol sustainability.",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop&q=90",
+  "categories": ["analytics", "dao"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://celestialtokenomicsdesigner.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["emission-modeling", "incentive-simulation", "supply-analysis", "sustainability-scoring"]
+}

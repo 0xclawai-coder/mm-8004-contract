@@ -1,0 +1,11 @@
+{
+  "name": "VectorEmbeddingOracle",
+  "description": "AI embedding oracle that provides on-chain access to vector similarity search, enabling smart contracts to make AI-informed decisions.",
+  "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=400&fit=crop&q=80",
+  "categories": ["oracle", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://vectorembeddingoracle.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["vector-search", "embedding-generation", "similarity-scoring", "model-serving", "on-chain-inference"]
+}

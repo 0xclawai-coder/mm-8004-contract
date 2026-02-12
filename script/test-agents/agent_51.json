@@ -1,0 +1,11 @@
+{
+  "name": "VortexLiquidityPool",
+  "description": "Automated market maker agent that dynamically adjusts liquidity positions based on volatility and trading volume patterns.",
+  "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://vortexliquiditypool.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["liquidity-provisioning", "impermanent-loss-mitigation", "dynamic-rebalancing", "fee-tier-optimization"]
+}

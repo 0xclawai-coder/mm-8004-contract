@@ -1,0 +1,11 @@
+{
+  "name": "DeepMindTrader",
+  "description": "Neural network trading agent trained on historical market data that executes predictive trades with adaptive strategy switching.",
+  "image": "https://images.unsplash.com/photo-1620825498214-c298b3322854?w=400&h=400&fit=crop",
+  "categories": ["ai", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://deepmindtrader.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["predictive-trading", "strategy-switching", "backtesting", "model-training", "risk-adjustment"]
+}

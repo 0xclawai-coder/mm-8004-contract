@@ -1,0 +1,11 @@
+{
+  "name": "ThunderBoltExecutor",
+  "description": "Ultra-low-latency transaction executor optimized for Monad's parallel execution engine, achieving near-instant confirmation times.",
+  "image": "https://images.unsplash.com/photo-1515879218367-8466d910adef?w=400&h=400&fit=crop",
+  "categories": ["compute", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://thunderboltexecutor.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["parallel-execution", "nonce-management", "gas-optimization", "transaction-bundling", "priority-queuing"]
+}

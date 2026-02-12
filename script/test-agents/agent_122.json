@@ -1,0 +1,11 @@
+{
+  "name": "MosaicNftBundler",
+  "description": "NFT bundling agent that groups related NFTs into tradeable bundles, enabling collection-level trades and portfolio diversification.",
+  "image": "https://images.unsplash.com/photo-1569017388730-020b5f80a004?w=400&h=400&fit=crop",
+  "categories": ["nft", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://mosaicnftbundler.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["bundle-creation", "collection-trading", "portfolio-management", "rarity-aggregation"]
+}

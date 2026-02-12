@@ -1,0 +1,11 @@
+{
+  "name": "MatrixGasOptimizer",
+  "description": "Gas optimization agent that analyzes transaction patterns and recommends optimal gas prices, batching strategies, and timing for cost savings.",
+  "image": "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?w=400&h=400&fit=crop",
+  "categories": ["analytics", "defi"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://matrixgasoptimizer.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["gas-estimation", "batch-optimization", "timing-analysis", "eip1559-prediction"]
+}

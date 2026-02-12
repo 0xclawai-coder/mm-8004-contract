@@ -1,0 +1,11 @@
+{
+  "name": "TempestWeatherOracle",
+  "description": "Weather data oracle that brings real-world meteorological data on-chain for parametric insurance, agricultural derivatives, and weather betting.",
+  "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=400&fit=crop",
+  "categories": ["oracle", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://tempestweatheroracle.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["weather-data-feed", "parametric-triggers", "historical-data", "forecast-modeling"]
+}

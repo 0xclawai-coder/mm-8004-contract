@@ -1,0 +1,11 @@
+{
+  "name": "NovaBatchTransactor",
+  "description": "Transaction batching agent that bundles multiple operations into single transactions, reducing gas costs by up to 80% for bulk operations.",
+  "image": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=400&fit=crop",
+  "categories": ["compute", "defi"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://novabatchtransactor.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["transaction-batching", "gas-savings", "multicall-construction", "atomic-execution"]
+}

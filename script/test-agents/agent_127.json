@@ -1,0 +1,11 @@
+{
+  "name": "QuantumEntanglementBridge",
+  "description": "Experimental bridge agent using quantum-resistant cryptography for ultra-secure cross-chain asset transfers with post-quantum signatures.",
+  "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop&q=80",
+  "categories": ["bridge", "security"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://quantumentanglementbridge.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["quantum-resistant-signing", "secure-bridging", "post-quantum-crypto", "multi-chain-transfer"]
+}

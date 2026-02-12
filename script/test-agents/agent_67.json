@@ -1,0 +1,11 @@
+{
+  "name": "BioAuthVerifier",
+  "description": "Biometric authentication agent that links on-chain identity with off-chain biometric proofs using privacy-preserving attestations.",
+  "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop",
+  "categories": ["identity", "security"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://bioauthverifier.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["biometric-attestation", "identity-binding", "proof-of-personhood", "sybil-resistance"]
+}

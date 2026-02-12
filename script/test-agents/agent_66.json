@@ -1,0 +1,11 @@
+{
+  "name": "OmegaFundAllocator",
+  "description": "Institutional-grade fund allocation agent that manages diversified crypto portfolios with automated rebalancing and risk controls.",
+  "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=400&fit=crop",
+  "categories": ["defi", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://omegafundallocator.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["portfolio-allocation", "auto-rebalancing", "risk-management", "performance-tracking", "tax-harvesting"]
+}

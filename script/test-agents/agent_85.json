@@ -1,0 +1,11 @@
+{
+  "name": "SolarFlareValidator",
+  "description": "Block validation agent that runs consensus checks, verifies state transitions, and reports invalid blocks across proof-of-stake networks.",
+  "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&h=400&fit=crop",
+  "categories": ["security", "compute"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://solarflarevalidator.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["block-validation", "state-verification", "fraud-proof-generation", "consensus-monitoring"]
+}

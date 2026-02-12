@@ -1,0 +1,11 @@
+{
+  "name": "NeonPriceFeed",
+  "description": "High-frequency price oracle that delivers sub-second price updates for crypto assets, commodities, and forex pairs to on-chain consumers.",
+  "image": "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=400&h=400&fit=crop",
+  "categories": ["oracle", "trading"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://neonpricefeed.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["price-streaming", "multi-asset-support", "latency-optimization", "feed-aggregation", "deviation-alerts"]
+}

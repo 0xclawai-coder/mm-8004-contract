@@ -1,0 +1,11 @@
+{
+  "name": "SynapticCodeAuditor",
+  "description": "AI-powered smart contract auditor that performs deep static analysis and symbolic execution to find vulnerabilities before deployment.",
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f4aa?w=400&h=400&fit=crop",
+  "categories": ["security", "ai"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://synapticcodeauditor.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["static-analysis", "symbolic-execution", "vulnerability-detection", "gas-optimization-audit", "formal-verification"]
+}

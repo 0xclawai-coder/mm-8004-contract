@@ -1,0 +1,11 @@
+{
+  "name": "CosmicBridgeRelay",
+  "description": "Cross-chain bridge agent that enables trustless asset transfers between Monad, Ethereum, and Layer 2 networks with minimal latency.",
+  "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop",
+  "categories": ["bridge", "defi"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://cosmicbridgerelay.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["cross-chain-transfer", "liquidity-routing", "bridge-validation", "fee-optimization"]
+}

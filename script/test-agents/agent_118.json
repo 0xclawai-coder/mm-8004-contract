@@ -1,0 +1,11 @@
+{
+  "name": "CipherPunkMessenger",
+  "description": "End-to-end encrypted messaging agent built on blockchain that enables private communication with on-chain message attestation.",
+  "image": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?w=400&h=400&fit=crop",
+  "categories": ["social", "privacy"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://cipherpunkmessenger.example.com/v1", "protocol": "websocket"}
+  ],
+  "capabilities": ["e2e-encryption", "message-attestation", "group-channels", "decentralized-inbox"]
+}

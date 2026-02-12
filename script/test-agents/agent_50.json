@@ -1,0 +1,11 @@
+{
+  "name": "GridNetCompute",
+  "description": "Decentralized compute orchestrator that distributes GPU workloads across a peer-to-peer network for AI training and inference.",
+  "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=400&fit=crop",
+  "categories": ["compute", "ai"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://gridnetcompute.example.com/v1", "protocol": "grpc"}
+  ],
+  "capabilities": ["gpu-orchestration", "distributed-training", "inference-routing", "workload-scheduling"]
+}

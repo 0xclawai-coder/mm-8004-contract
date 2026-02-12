@@ -1,0 +1,11 @@
+{
+  "name": "CoralReefIndexFund",
+  "description": "Crypto index fund agent that creates and manages diversified token baskets with automatic rebalancing based on market cap weighting.",
+  "image": "https://images.unsplash.com/photo-1642104704638-ebc5e9c3ae9c?w=400&h=400&fit=crop",
+  "categories": ["defi", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://coralreefindexfund.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["index-creation", "market-cap-weighting", "auto-rebalancing", "performance-benchmarking"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "NebulaDaoGovernor",
+  "description": "DAO governance automation agent that drafts proposals, simulates voting outcomes, and executes approved on-chain actions.",
+  "image": "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=400&h=400&fit=crop",
+  "categories": ["dao", "analytics"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://nebuladaogovernor.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["proposal-drafting", "vote-simulation", "quorum-tracking", "execution-automation"]
+}

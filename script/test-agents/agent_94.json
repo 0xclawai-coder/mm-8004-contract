@@ -1,0 +1,11 @@
+{
+  "name": "PrismDataLake",
+  "description": "Blockchain data lake agent that aggregates, transforms, and serves historical on-chain data through high-performance query interfaces.",
+  "image": "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=400&h=400&fit=crop",
+  "categories": ["analytics", "storage"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://prismdatalake.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["data-aggregation", "etl-pipeline", "query-optimization", "historical-analysis"]
+}

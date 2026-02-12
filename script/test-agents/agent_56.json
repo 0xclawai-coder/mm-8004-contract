@@ -1,0 +1,11 @@
+{
+  "name": "TitanRiskEngine",
+  "description": "Portfolio risk management agent that continuously monitors collateral ratios, liquidation thresholds, and systemic risk across DeFi protocols.",
+  "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop",
+  "categories": ["defi", "analytics"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://titanriskengine.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["risk-scoring", "liquidation-alerts", "collateral-monitoring", "stress-testing", "portfolio-hedging"]
+}

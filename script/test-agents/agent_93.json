@@ -1,0 +1,11 @@
+{
+  "name": "HydraMultiSig",
+  "description": "Multi-signature wallet management agent that coordinates signing ceremonies, manages signer rotations, and executes threshold approvals.",
+  "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=400&fit=crop",
+  "categories": ["security", "dao"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://hydramultisig.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["multi-sig-coordination", "signer-management", "threshold-approval", "transaction-queuing", "emergency-override"]
+}

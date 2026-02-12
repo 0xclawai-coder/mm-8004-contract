@@ -1,0 +1,11 @@
+{
+  "name": "TerraformLandAgent",
+  "description": "Virtual land management agent that handles parcel trading, zoning regulations, and development permits in decentralized metaverse platforms.",
+  "image": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=400&h=400&fit=crop",
+  "categories": ["gaming", "nft"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://terraformlandagent.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["land-trading", "zoning-management", "development-permits", "valuation-engine"]
+}

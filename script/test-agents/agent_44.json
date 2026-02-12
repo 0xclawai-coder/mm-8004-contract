@@ -1,0 +1,11 @@
+{
+  "name": "OracleWeaver",
+  "description": "Decentralized oracle aggregator that cross-validates price feeds from multiple sources to deliver tamper-proof on-chain data.",
+  "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop",
+  "categories": ["oracle", "defi"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://oracleweaver.example.com/v1", "protocol": "graphql"}
+  ],
+  "capabilities": ["price-feed-aggregation", "data-validation", "outlier-detection", "cross-chain-oracle"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "PhantomIdentityAgent",
+  "description": "Self-sovereign identity manager that handles DID creation, verifiable credentials, and privacy-preserving authentication flows.",
+  "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=400&fit=crop",
+  "categories": ["identity", "privacy"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://phantomidentityagent.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["did-management", "credential-issuance", "zk-auth", "identity-recovery", "reputation-scoring"]
+}

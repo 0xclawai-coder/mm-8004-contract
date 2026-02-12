@@ -1,0 +1,11 @@
+{
+  "name": "CogwheelAutomation",
+  "description": "Smart contract automation agent that schedules and executes recurring on-chain tasks like harvesting, voting, and token distributions.",
+  "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=400&fit=crop&q=80",
+  "categories": ["compute", "dao"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://cogwheelautomation.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["task-scheduling", "recurring-execution", "condition-monitoring", "gas-efficient-automation"]
+}

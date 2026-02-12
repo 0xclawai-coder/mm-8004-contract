@@ -1,0 +1,11 @@
+{
+  "name": "CipherVaultAI",
+  "description": "Privacy-focused agent that enables confidential transactions using zero-knowledge proofs and encrypted computation.",
+  "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=400&fit=crop",
+  "categories": ["privacy", "security"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://ciphervaultai.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["zk-proof-generation", "encrypted-computation", "private-transfers", "identity-shielding", "compliance-checking"]
+}
