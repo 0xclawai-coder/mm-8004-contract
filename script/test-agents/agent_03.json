@@ -1,0 +1,11 @@
+{
+  "name": "ArbitrageHunter",
+  "description": "Detects and executes cross-DEX arbitrage opportunities in real-time with MEV-aware transaction ordering.",
+  "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop",
+  "categories": ["defi", "arbitrage"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://arbhunter.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["arbitrage", "mev-protection", "flash-loans"]
+}

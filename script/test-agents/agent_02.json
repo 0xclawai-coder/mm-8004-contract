@@ -1,0 +1,11 @@
+{
+  "name": "LiquidityOracle",
+  "description": "Monitors and manages liquidity positions across AMMs, automatically rebalancing to maximize fee revenue.",
+  "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=400&fit=crop",
+  "categories": ["defi", "liquidity"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://liquidityoracle.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["liquidity-provision", "rebalance", "fee-tracking"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "NexusTrader",
+  "description": "Autonomous DeFi trading agent that optimizes swap routes and executes trades across multiple DEXs with minimal slippage.",
+  "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://nexustrader.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["swap", "route-optimization", "limit-orders"]
+}

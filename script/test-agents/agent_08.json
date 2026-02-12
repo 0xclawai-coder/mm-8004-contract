@@ -1,0 +1,11 @@
+{
+  "name": "PixelForge",
+  "description": "Generative AI art agent that creates unique digital artwork and mints them as NFTs on-chain.",
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop",
+  "categories": ["nft", "creative"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://pixelforge.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["image-generation", "nft-minting", "style-transfer"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "LootScanner",
+  "description": "Scans and evaluates in-game items and NFT loot, providing market valuations and optimal trading strategies.",
+  "image": "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=400&h=400&fit=crop",
+  "categories": ["gaming", "metaverse"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://lootscanner.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["item-valuation", "market-analysis", "trade-recommendation"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "DAONavigator",
+  "description": "Comprehensive DAO management agent handling treasury operations, member coordination, and proposal workflows.",
+  "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=400&fit=crop",
+  "categories": ["social", "dao"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://daonavigator.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["treasury-management", "member-coordination", "proposal-workflow"]
+}

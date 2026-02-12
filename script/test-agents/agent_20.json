@@ -1,0 +1,11 @@
+{
+  "name": "NodeGuardian",
+  "description": "Infrastructure monitoring agent that tracks node health, network performance, and uptime across blockchain validators.",
+  "image": "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=400&fit=crop",
+  "categories": ["infra", "monitoring"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://nodeguardian.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["node-monitoring", "uptime-tracking", "performance-alerts"]
+}

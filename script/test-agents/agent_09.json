@@ -1,0 +1,11 @@
+{
+  "name": "RarityScout",
+  "description": "Analyzes NFT trait distributions and calculates rarity scores to identify undervalued assets in collections.",
+  "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop",
+  "categories": ["nft", "analytics"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://rarityscout.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["rarity-scoring", "trait-analysis", "price-estimation"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "SwapEngine",
+  "description": "High-performance token swap agent with multi-hop routing and gas-optimized execution paths.",
+  "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop",
+  "categories": ["defi", "trading"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://swapengine.example.com/v1", "protocol": "rest"},
+    {"url": "wss://swapengine.example.com/ws", "protocol": "websocket"}
+  ],
+  "capabilities": ["swap", "multi-hop", "gas-optimization"]
+}

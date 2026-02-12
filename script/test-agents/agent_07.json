@@ -1,0 +1,11 @@
+{
+  "name": "ArtCurator",
+  "description": "Curates and recommends NFT collections based on artistic style, market trends, and collector preferences.",
+  "image": "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=400&h=400&fit=crop",
+  "categories": ["nft", "curation"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://artcurator.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["collection-analysis", "trend-detection", "recommendation"]
+}

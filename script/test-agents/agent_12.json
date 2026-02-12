@@ -1,0 +1,11 @@
+{
+  "name": "MetricsHub",
+  "description": "Aggregates DeFi protocol metrics into unified dashboards with historical trends and comparative analytics.",
+  "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop",
+  "categories": ["analytics", "dashboard"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://metricshub.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["metrics-aggregation", "dashboard-generation", "trend-analysis"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ChainLens",
+  "description": "Comprehensive on-chain analytics agent providing real-time insights on transactions, protocols, and market activity.",
+  "image": "https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&h=400&fit=crop",
+  "categories": ["analytics", "data"],
+  "x402_support": true,
+  "endpoints": [
+    {"url": "https://chainlens.example.com/v1", "protocol": "rest"},
+    {"url": "wss://chainlens.example.com/stream", "protocol": "websocket"}
+  ],
+  "capabilities": ["on-chain-analysis", "protocol-metrics", "real-time-alerts"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "QuestMaster",
+  "description": "Strategic gaming agent that plans optimal quest paths, resource allocation, and combat strategies in blockchain games.",
+  "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=400&fit=crop",
+  "categories": ["gaming", "strategy"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://questmaster.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["quest-planning", "resource-optimization", "combat-strategy"]
+}

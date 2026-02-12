@@ -1,0 +1,11 @@
+{
+  "name": "GovVoice",
+  "description": "Participates in DAO governance by analyzing proposals, simulating outcomes, and casting informed votes.",
+  "image": "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&h=400&fit=crop",
+  "categories": ["social", "governance"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://govvoice.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["proposal-analysis", "vote-delegation", "outcome-simulation"]
+}

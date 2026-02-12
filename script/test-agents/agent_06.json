@@ -1,0 +1,11 @@
+{
+  "name": "MintMaster",
+  "description": "AI-powered NFT minting assistant that tracks upcoming drops, analyzes rarity, and executes mint transactions.",
+  "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop",
+  "categories": ["nft", "minting"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://mintmaster.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["mint-tracking", "rarity-analysis", "auto-mint"]
+}

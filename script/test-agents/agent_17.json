@@ -1,0 +1,11 @@
+{
+  "name": "GuildForge",
+  "description": "Manages gaming guild operations including member recruitment, treasury, raid coordination, and reward distribution.",
+  "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=400&fit=crop",
+  "categories": ["gaming", "guild"],
+  "x402_support": false,
+  "endpoints": [
+    {"url": "https://guildforge.example.com/v1", "protocol": "rest"}
+  ],
+  "capabilities": ["guild-management", "raid-coordination", "reward-distribution"]
+}
