@@ -3,6 +3,12 @@ pragma solidity ^0.8.28;
 
 import {IERC721} from "forge-std/interfaces/IERC721.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+/// @notice Minimal WETH9/WMON interface for wrap/unwrap
+interface IWMON {
+    function deposit() external payable;
+    function approve(address spender, uint256 amount) external returns (bool);
+}
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {IERC2981} from "./interfaces/IERC2981.sol";
 import {IMoltMarketplace} from "./interfaces/IMoltMarketplace.sol";
@@ -49,6 +55,11 @@ contract MoltMarketplace is IMoltMarketplace, AccessControlUpgradeable, Pausable
     mapping(uint256 => BundleListing) private _bundles;
     mapping(address => bool) private _allowedPaymentTokens;
     mapping(address => uint256) public pendingWithdrawals;
+
+    /// @notice WMON (Wrapped MON) address — set by admin for native offer wrapping
+    address public wmonAddress;
+    /// @notice Tracks offers where WMON is escrowed in the contract (from makeOfferWithNative)
+    mapping(uint256 => bool) private _escrowedOffers;
 
     // ──────────────────── Modifiers ────────────────────
 
@@ -194,6 +205,44 @@ contract MoltMarketplace is IMoltMarketplace, AccessControlUpgradeable, Pausable
         emit OfferMade(offerId, msg.sender, nftContract, tokenId, paymentToken, amount, expiry);
     }
 
+    /// @notice Make an offer using native MON — automatically wraps to WMON.
+    ///         Single transaction: wrap + approve + create offer.
+    /// @param nftContract The NFT contract address
+    /// @param tokenId The token ID to make an offer on
+    /// @param expiry Timestamp when the offer expires
+    /// @return offerId The ID of the created offer
+    function makeOfferWithNative(
+        address nftContract,
+        uint256 tokenId,
+        uint256 expiry
+    ) external payable nonReentrant whenNotPaused returns (uint256 offerId) {
+        require(wmonAddress != address(0), "WMON not configured");
+        require(_allowedPaymentTokens[wmonAddress], "WMON not allowed as payment");
+        require(msg.value > 0, "Amount must be > 0");
+        require(expiry > block.timestamp, "Expiry in the past");
+
+        uint256 amount = msg.value;
+
+        // Wrap MON → WMON (WMON is held by this contract as escrow)
+        IWMON(wmonAddress).deposit{value: amount}();
+
+        offerId = _nextOfferId++;
+        _offers[offerId] = Offer({
+            offerer: msg.sender,
+            nftContract: nftContract,
+            tokenId: tokenId,
+            paymentToken: wmonAddress,
+            amount: amount,
+            expiry: expiry,
+            status: OfferStatus.Active
+        });
+
+        // Mark this offer as escrowed (WMON held by marketplace)
+        _escrowedOffers[offerId] = true;
+
+        emit OfferMade(offerId, msg.sender, nftContract, tokenId, wmonAddress, amount, expiry);
+    }
+
     /// @inheritdoc IMoltMarketplace
     function acceptOffer(uint256 offerId) external nonReentrant whenNotPaused {
         Offer storage offer = _offers[offerId];
@@ -205,20 +254,33 @@ contract MoltMarketplace is IMoltMarketplace, AccessControlUpgradeable, Pausable
 
         offer.status = OfferStatus.Accepted;
 
-        IERC20(offer.paymentToken).safeTransferFrom(offer.offerer, address(this), offer.amount);
-        _distributeFunds(offer.nftContract, offer.tokenId, msg.sender, offer.paymentToken, offer.amount);
+        if (_escrowedOffers[offerId]) {
+            // WMON already held by this contract — distribute directly
+            _distributeFunds(offer.nftContract, offer.tokenId, msg.sender, offer.paymentToken, offer.amount);
+        } else {
+            // Standard: pull ERC-20 from offerer
+            IERC20(offer.paymentToken).safeTransferFrom(offer.offerer, address(this), offer.amount);
+            _distributeFunds(offer.nftContract, offer.tokenId, msg.sender, offer.paymentToken, offer.amount);
+        }
         IERC721(offer.nftContract).transferFrom(msg.sender, offer.offerer, offer.tokenId);
 
         emit OfferAccepted(offerId, msg.sender);
     }
 
     /// @inheritdoc IMoltMarketplace
-    function cancelOffer(uint256 offerId) external {
+    function cancelOffer(uint256 offerId) external nonReentrant {
         Offer storage offer = _offers[offerId];
         require(offer.status == OfferStatus.Active, "Not active");
         require(msg.sender == offer.offerer, "Not offerer");
 
         offer.status = OfferStatus.Cancelled;
+
+        // Refund escrowed WMON
+        if (_escrowedOffers[offerId]) {
+            IERC20(offer.paymentToken).safeTransfer(offer.offerer, offer.amount);
+            delete _escrowedOffers[offerId];
+        }
+
         emit OfferCancelled(offerId);
     }
 
@@ -585,6 +647,12 @@ contract MoltMarketplace is IMoltMarketplace, AccessControlUpgradeable, Pausable
         address oldRecipient = feeRecipient;
         feeRecipient = newRecipient;
         emit FeeRecipientUpdated(oldRecipient, newRecipient);
+    }
+
+    /// @notice Set the WMON address (admin only)
+    function setWmonAddress(address _wmon) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_wmon != address(0), "Zero address");
+        wmonAddress = _wmon;
     }
 
     /// @inheritdoc IMoltMarketplace
